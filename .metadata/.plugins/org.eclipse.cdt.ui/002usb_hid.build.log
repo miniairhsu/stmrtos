@@ -1,0 +1,20 @@
+18:44:43 **** Incremental Build of configuration Debug for project 002usb_hid ****
+make -j4 all 
+arm-none-eabi-gcc "../USB_DEVICE/App/usbd_custom_hid_if.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../USB_DEVICE/App -I../USB_DEVICE/Target -I../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Device_Library/Class/CustomHID/Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"USB_DEVICE/App/usbd_custom_hid_if.d" -MT"USB_DEVICE/App/usbd_custom_hid_if.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "USB_DEVICE/App/usbd_custom_hid_if.o"
+arm-none-eabi-gcc -o "002usb_hid.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\minia\Documents\academy\rtos_workspace\workspace\002usb_hid\STM32F407IGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="002usb_hid.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 002usb_hid.elf
+ 
+arm-none-eabi-objdump -h -S  002usb_hid.elf  > "002usb_hid.list"
+arm-none-eabi-objcopy  -O binary  002usb_hid.elf  "002usb_hid.bin"
+arm-none-eabi-size   002usb_hid.elf 
+   text	   data	    bss	    dec	    hex	filename
+  26888	    364	   4060	  31312	   7a50	002usb_hid.elf
+Finished building: 002usb_hid.bin
+Finished building: default.size.stdout
+ 
+Finished building: 002usb_hid.list
+ 
+ 
+
+18:44:44 Build Finished. 0 errors, 0 warnings. (took 1s.347ms)
+

@@ -1,0 +1,18 @@
+/*
+ * led_effect.c
+ *
+ *  Created on: May 28, 2021
+ *      Author: minia
+ */
+
+#include "main.h"
+
+void led_effect_stop(void)
+{
+
+}
+
+void led_effect(int n)
+{
+
+}

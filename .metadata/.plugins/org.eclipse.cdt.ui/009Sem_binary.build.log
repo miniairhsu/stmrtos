@@ -1,0 +1,10 @@
+20:45:07 **** Incremental Build of configuration Debug for project 009Sem_binary ****
+make -j4 all 
+arm-none-eabi-size   009Sem_binary.elf 
+   text	   data	    bss	    dec	    hex	filename
+  34036	    128	  80936	 115100	  1c19c	009Sem_binary.elf
+Finished building: default.size.stdout
+ 
+
+20:45:07 Build Finished. 0 errors, 0 warnings. (took 439ms)
+

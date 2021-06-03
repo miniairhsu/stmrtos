@@ -1,0 +1,20 @@
+14:27:16 **** Incremental Build of configuration Debug for project 004_LED_Periodic ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/minia/Documents/academy/rtos_workspace/workspace/common/ThirdParty/FreeRTOS/include" -I"C:/Users/minia/Documents/academy/rtos_workspace/workspace/common/ThirdParty/FreeRTOS/portable/GCC/ARM_CM4F" -I"C:/Users/minia/Documents/academy/rtos_workspace/workspace/common/ThirdParty/SEGGER/Config" -I"C:/Users/minia/Documents/academy/rtos_workspace/workspace/common/ThirdParty/SEGGER/OS" -I"C:/Users/minia/Documents/academy/rtos_workspace/workspace/common/ThirdParty/SEGGER/SEGGER" -I"C:/Users/minia/Documents/academy/rtos_workspace/workspace/common/inc" -I"C:/Users/minia/Documents/academy/rtos_workspace/workspace/common/ThirdParty/FreeRTOS" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "004_LED_Periodic.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\minia\Documents\academy\rtos_workspace\workspace\004_LED_Periodic\STM32F407IGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="004_LED_Periodic.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 004_LED_Periodic.elf
+ 
+arm-none-eabi-objdump -h -S  004_LED_Periodic.elf  > "004_LED_Periodic.list"
+arm-none-eabi-objcopy  -O binary  004_LED_Periodic.elf  "004_LED_Periodic.bin"
+arm-none-eabi-size   004_LED_Periodic.elf 
+   text	   data	    bss	    dec	    hex	filename
+  20456	     28	  80460	 100944	  18a50	004_LED_Periodic.elf
+Finished building: default.size.stdout
+ 
+Finished building: 004_LED_Periodic.bin
+ 
+Finished building: 004_LED_Periodic.list
+ 
+
+14:27:18 Build Finished. 0 errors, 0 warnings. (took 1s.685ms)
+
